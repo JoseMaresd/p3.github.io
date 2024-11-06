@@ -1,29 +1,4 @@
-document.querySelectorAll('.social-icon').forEach(function (icon) {
-    icon.addEventListener('click', function (e) {
-        console.log('Icon clicked'); // Verifica que el evento de clic está funcionando
-        e.preventDefault(); // Prevenir la acción predeterminada de ir al enlace
 
-        // Crear o actualizar el mensaje de agradecimiento
-        let message = document.getElementById('thank-you-message');
-        if (!message) {
-            console.log('Creating message element');
-            message = document.createElement('div');
-            message.id = 'thank-you-message';
-            message.style.marginTop = '20px';
-            message.style.color = '#333';
-            message.style.fontSize = '16px';
-            document.querySelector('.social-section').appendChild(message);
-        }
-        message.textContent = '¡Gracias por seguirnos en nuestras redes sociales!';
-        console.log('Message updated');
-
-        // Esperar unos segundos antes de redirigir
-        setTimeout(() => {
-            console.log('Redirecting to', icon.href);
-            window.open(icon.href, '_blank');
-        }, 1500);
-    });
-});
 ///////////////////////////////////////////////////////
 
 /* let isMapVisible = true;
